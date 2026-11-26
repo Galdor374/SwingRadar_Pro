@@ -7,7 +7,7 @@ FAPI = "https://fapi.binance.com"
 # Kripto Evren & Hacim Ayarları
 CRYPTO_MAX_COINS = 200
 CRYPTO_MIN_VOL_24H = 0.0
-SCALPER_MIN_VOL_USD = 25_000_000.0  # 1H Scalper günlük min hacim: 25M$
+SCALPER_MIN_VOL_USD = 3_000_000.0  # 1H Scalper günlük min hacim: 25M$
 
 MIN_DISPLAY_SCORE = 60
 
