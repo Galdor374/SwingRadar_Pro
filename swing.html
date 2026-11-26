@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8">
+    <title>KRİPTO SWİNG EKRANI — SwingRadar Pro</title><style>
+      :root{
+        --bg:#151312; --card:#1f1c1a; --card2:#272220;
+        --border:rgba(224,122,95,0.22); --border2:rgba(233,196,106,0.16);
+        --text:#f6efe8; --muted:#a89b8c;
+        --terracotta:#e07a5f; --champagne:#e9c46a; --copper:#d98a5b;
+        --green:#38c996; --red:#f06560;
+      }
+      *{box-sizing:border-box;margin:0;padding:0}
+      body{font-family:Inter,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse at 12% 0%, #2c1e1a 0%, var(--bg) 52%);color:var(--text);padding:22px 28px 52px;max-width:1460px;margin:auto}
+      a{color:inherit;text-decoration:none}
+      .top-bar{background:linear-gradient(135deg,#251d1a 0%,#1c1816 100%);border:1px solid var(--border);border-radius:16px;padding:18px 22px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+      h1{font-size:19px;font-weight:800;color:var(--champagne)}
+      .sub{font-size:11.5px;color:var(--muted);margin-top:3px}
+      .nav-pills{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+      .nav-btn{padding:7px 14px;border-radius:10px;font-size:12px;font-weight:700;background:var(--card2);border:1px solid var(--border2);color:var(--text);transition:.15s}
+      .nav-btn:hover,.nav-btn.active{background:rgba(224,122,95,0.22);border-color:var(--terracotta);color:var(--champagne)}
+      .pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:600;background:rgba(224,122,95,0.13);border:1px solid rgba(224,122,95,0.28);color:#f4d8cd}
+      .home-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+      @media(max-width:1050px){.home-grid{grid-template-columns:1fr}}
+      .hub-card{display:block;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;transition:.18s}
+      .hub-card:hover{transform:translateY(-3px);border-color:var(--champagne);box-shadow:0 10px 28px rgba(0,0,0,0.35)}
+      .hub-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:14px}
+      .hub-title{font-size:16px;font-weight:800;color:var(--terracotta)}
+      .hub-eq{font-size:21px;font-weight:800;font-variant-numeric:tabular-nums;text-align:right}
+      .hub-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+      .mini-stat{background:var(--card2);border-radius:10px;padding:8px 10px}
+      .mini-stat span{display:block;font-size:10px;color:var(--muted);text-transform:uppercase}
+      .mini-stat b{font-size:13px;font-variant-numeric:tabular-nums}
+      .hub-cta{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid rgba(255,244,230,0.08);font-size:12px;font-weight:700;color:var(--champagne)}
+      .panel{background:var(--card);border:1px solid var(--border2);border-radius:15px;padding:16px 20px;margin-bottom:16px;overflow-x:auto}
+      .kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
+      @media(max-width:800px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+      .kpi{background:var(--card2);border-radius:10px;padding:9px 12px}
+      .kpi span{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;margin-bottom:2px}
+      .kpi b{font-size:14px;font-variant-numeric:tabular-nums}
+      .charts-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}
+      @media(max-width:950px){.charts-2{grid-template-columns:1fr}}
+      .chart-box{background:var(--card);border:1px solid var(--border2);border-radius:15px;padding:14px 16px}
+      .ctitle{font-size:11px;font-weight:800;color:var(--champagne);letter-spacing:.4px;margin-bottom:8px}
+      .ptitle{font-size:13.5px;font-weight:800;color:var(--champagne);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+      .cnt{background:rgba(224,122,95,0.20);color:#ffd5c7;padding:2px 8px;border-radius:999px;font-size:11px}
+      table{width:100%;border-collapse:collapse;font-size:12px}
+      th{text-align:left;font-size:10px;color:var(--muted);text-transform:uppercase;padding:7px 6px;border-bottom:1px solid var(--border2)}
+      td{padding:9px 6px;border-top:1px solid rgba(255,244,230,0.06);vertical-align:middle}
+      tr:hover td{background:rgba(224,122,95,0.05)}
+      .num{font-variant-numeric:tabular-nums;white-space:nowrap}
+      .pos{color:var(--green)} .neg{color:var(--red)}
+      .tag{padding:3px 8px;border-radius:6px;font-size:10.5px;font-weight:800}
+      .tag-long{background:rgba(56,201,150,0.16);color:var(--green);border:1px solid rgba(56,201,150,0.32)}
+      .tag-short{background:rgba(240,101,96,0.16);color:var(--red);border:1px solid rgba(240,101,96,0.32)}
+      .sc{display:inline-block;padding:2px 8px;border-radius:6px;font-weight:800;background:rgba(233,196,106,0.18);color:var(--champagne)}
+      .empty{color:var(--muted);font-size:12px;padding:10px 4px}
+    </style></head><body>
+    
+    <div class="top-bar">
+      <div>
+        <h1>SWINGRADAR PRO</h1>
+        <div class="sub">Son Tarama: <b>26.11.2026 19:46</b> • XU100: Satıcılı / Düşüş (Short Açık) (%9.0) • BTC: AYI (Genişlik %11)</div>
+      </div>
+      <div class="nav-pills"><a class="nav-btn " href="index.html">Ana Ekran</a><a class="nav-btn " href="bist.html">BIST</a><a class="nav-btn " href="scalper.html">Kripto 1H Scalper</a><a class="nav-btn active" href="swing.html">Kripto Swing</a></div>
+    </div>
+    <div class="panel">
+      <div class="hub-top">
+        <div>
+          <div class="hub-title">KRİPTO SWİNG EKRANI</div>
+          <div class="sub">Motor 8 • v2.5 + 45G + Birleşik C • Başlangıç: <b>10,000 $</b> • Pozisyon: <b>%5</b> (~500 $) • Bileşik</div>
+        </div>
+        <div style="text-align:right">
+          <div class="hub-eq">10,000.00 <span style="color:var(--champagne);font-size:14px">$</span></div>
+          <div class="sub pos"><b>+0.00%</b> • Açık K/Z: <span class="pos">+0.00 $</span></div>
+        </div>
+      </div>
+      <div class="kpi-row">
+        <div class="kpi"><span>Kapalı / Açık</span><b>0 / 0</b></div>
+        <div class="kpi"><span>Win Rate</span><b>%0.0</b></div>
+        <div class="kpi"><span>Profit Factor</span><b>0.00</b></div>
+        <div class="kpi"><span>Toplam R</span><b class="pos">+0.00R</b></div>
+        <div class="kpi"><span>Max DD</span><b class="neg">-%0.00</b></div>
+      </div>
+    </div>
+
+    <div class="charts-2">
+      <div class="chart-box"><div class="ctitle">PORTFÖY EĞRİSİ ($)</div><svg viewBox="0 0 520 165" style="width:100%;height:auto;display:block">
+      <defs>
+        <linearGradient id="g_equity_6806" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e07a5f" stop-opacity="0.32"/>
+          <stop offset="100%" stop-color="#e07a5f" stop-opacity="0.02"/>
+        </linearGradient>
+      </defs>
+      <line x1="64" y1="141.0" x2="502" y2="141.0" stroke="rgba(233,196,106,0.12)" stroke-dasharray="3,3"/><text x="58" y="144.0" text-anchor="end" fill="#a89b8c" font-size="9.5">9,800 $</text><line x1="64" y1="79.5" x2="502" y2="79.5" stroke="rgba(233,196,106,0.12)" stroke-dasharray="3,3"/><text x="58" y="82.5" text-anchor="end" fill="#a89b8c" font-size="9.5">10,000 $</text><line x1="64" y1="18.0" x2="502" y2="18.0" stroke="rgba(233,196,106,0.12)" stroke-dasharray="3,3"/><text x="58" y="21.0" text-anchor="end" fill="#a89b8c" font-size="9.5">10,200 $</text><line x1="64" y1="79.5" x2="502" y2="79.5" stroke="rgba(246,239,232,0.28)" stroke-width="1"/>
+      <polygon points="64.0,141.0 64.0,79.5 502.0,79.5 502.0,141.0" fill="url(#g_equity_6806)"/>
+      <polyline fill="none" stroke="#e07a5f" stroke-width="2.2" stroke-linejoin="round" points="64.0,79.5 502.0,79.5"/>
+      <circle cx="502.0" cy="79.5" r="3.8" fill="#e07a5f" stroke="#151312" stroke-width="1.5"/>
+      <text x="64" y="159" fill="#a89b8c" font-size="9.5">26.11.2026</text>
+      <text x="502" y="159" text-anchor="end" fill="#e9c46a" font-size="9.5" font-weight="700">26.11.2026 • 10,000 $</text>
+    </svg></div>
+      <div class="chart-box"><div class="ctitle">GETİRİ EĞRİSİ (%)</div><svg viewBox="0 0 520 165" style="width:100%;height:auto;display:block">
+      <defs>
+        <linearGradient id="g_ret_pct_6275" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e9c46a" stop-opacity="0.32"/>
+          <stop offset="100%" stop-color="#e9c46a" stop-opacity="0.02"/>
+        </linearGradient>
+      </defs>
+      <line x1="64" y1="141.0" x2="502" y2="141.0" stroke="rgba(233,196,106,0.12)" stroke-dasharray="3,3"/><text x="58" y="144.0" text-anchor="end" fill="#a89b8c" font-size="9.5">-1.00%</text><line x1="64" y1="79.5" x2="502" y2="79.5" stroke="rgba(233,196,106,0.12)" stroke-dasharray="3,3"/><text x="58" y="82.5" text-anchor="end" fill="#a89b8c" font-size="9.5">+0.00%</text><line x1="64" y1="18.0" x2="502" y2="18.0" stroke="rgba(233,196,106,0.12)" stroke-dasharray="3,3"/><text x="58" y="21.0" text-anchor="end" fill="#a89b8c" font-size="9.5">+1.00%</text><line x1="64" y1="79.5" x2="502" y2="79.5" stroke="rgba(246,239,232,0.28)" stroke-width="1"/>
+      <polygon points="64.0,141.0 64.0,79.5 502.0,79.5 502.0,141.0" fill="url(#g_ret_pct_6275)"/>
+      <polyline fill="none" stroke="#e9c46a" stroke-width="2.2" stroke-linejoin="round" points="64.0,79.5 502.0,79.5"/>
+      <circle cx="502.0" cy="79.5" r="3.8" fill="#e9c46a" stroke="#151312" stroke-width="1.5"/>
+      <text x="64" y="159" fill="#a89b8c" font-size="9.5">26.11.2026</text>
+      <text x="502" y="159" text-anchor="end" fill="#e9c46a" font-size="9.5" font-weight="700">26.11.2026 • +0.00%</text>
+    </svg></div>
+    </div>
+
+    <div class="panel"><div class="ptitle">AKTİF SİNYALLER <span class="cnt">0</span></div><div class="empty">Şu an 200 coin evreninde aktif Swing sinyali yok.</div></div>
+
+    <div class="panel">
+      <div class="ptitle">AÇIK POZİSYONLAR <span class="cnt">0</span></div>
+      <div class="empty">Bu kasada açık pozisyon yok.</div>
+    </div>
+
+    <div class="panel">
+      <div class="ptitle">KAPANAN İŞLEMLER (SON 30) <span class="cnt">0</span></div>
+      <div class="empty">Bu kasada henüz kapanan işlem yok.</div>
+    </div></body></html>
