@@ -86,9 +86,9 @@
         "cooldown_days": 5,
         "close_stop": true
       },
-      "status_note": "YENİ AÇILDI",
-      "unrealized_r": 0.0,
-      "unrealized_pnl": 0.0
+      "status_note": "AÇIK",
+      "unrealized_r": -0.0,
+      "unrealized_pnl": -0.0
     },
     {
       "opened_at": "26.11.2026 19:46",
@@ -117,7 +117,7 @@
         "cooldown_days": 5,
         "close_stop": true
       },
-      "status_note": "YENİ AÇILDI",
+      "status_note": "AÇIK",
       "unrealized_r": 0.0,
       "unrealized_pnl": 0.0
     }
@@ -127,5 +127,5 @@
     "BIST|Spot Long Dipten Topla|SISE": 1795674600000,
     "BIST|Spot Long Dipten Topla|PETKM": 1795674600000
   },
-  "last_scan": "26.11.2026 19:46"
+  "last_scan": "26.11.2026 20:48"
 }
