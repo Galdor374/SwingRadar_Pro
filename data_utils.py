@@ -7,6 +7,9 @@ import yfinance as yf
 
 from config import FAPI, EXCLUDED_CRYPTO_SYMS, CRYPTO_MAX_COINS, CRYPTO_MIN_VOL_24H
 
+VISION_API = "https://data-api.binance.vision"
+_USE_VISION = False
+
 _WEIGHT_LOCK = threading.Lock()
 _LAST_USED_WEIGHT = 0
 _PAUSE_UNTIL = 0.0
@@ -119,17 +122,20 @@ def _update_weight(resp):
         return
     try:
         w = int(w_hdr)
+        limit_hi = 4800 if _USE_VISION else 1900
+        limit_mid = 4200 if _USE_VISION else 1650
         with _WEIGHT_LOCK:
             _LAST_USED_WEIGHT = w
-            if w >= 1900:
+            if w >= limit_hi:
                 _PAUSE_UNTIL = max(_PAUSE_UNTIL, time.time() + 12.0)
-            elif w >= 1650:
+            elif w >= limit_mid:
                 _PAUSE_UNTIL = max(_PAUSE_UNTIL, time.time() + 3.0)
     except Exception:
         pass
 
 
 def fetch_binance_klines(session, symbol, interval, limit=400, end_time_ms=None, min_len=20):
+    url = f"{VISION_API}/api/v3/klines" if _USE_VISION else f"{FAPI}/fapi/v1/klines"
     params = {"symbol": symbol, "interval": interval, "limit": limit}
     if end_time_ms is not None:
         params["endTime"] = int(end_time_ms)
@@ -137,7 +143,7 @@ def fetch_binance_klines(session, symbol, interval, limit=400, end_time_ms=None,
     for attempt in range(4):
         _respect_rate_limit()
         try:
-            r = session.get(f"{FAPI}/fapi/v1/klines", params=params, timeout=14)
+            r = session.get(url, params=params, timeout=14)
             _update_weight(r)
             if r.status_code == 200:
                 raw = r.json()
@@ -168,18 +174,41 @@ def fetch_binance_klines(session, symbol, interval, limit=400, end_time_ms=None,
 
 
 def get_binance_universe_and_movers(session, max_coins=CRYPTO_MAX_COINS, min_vol=CRYPTO_MIN_VOL_24H):
-    ex_info = session.get(f"{FAPI}/fapi/v1/exchangeInfo", timeout=15).json()
-    active = {
-        s["symbol"]
-        for s in ex_info.get("symbols", [])
-        if s.get("status") == "TRADING"
-        and s.get("quoteAsset") == "USDT"
-        and s.get("contractType") == "PERPETUAL"
-        and s["symbol"] not in EXCLUDED_CRYPTO_SYMS
-    }
-    tks = session.get(f"{FAPI}/fapi/v1/ticker/24hr", timeout=15).json()
+    global _USE_VISION
+    _USE_VISION = False
 
-    liquid = [x for x in tks if x["symbol"] in active and float(x.get("quoteVolume", 0)) >= min_vol]
+    r_info = session.get(f"{FAPI}/fapi/v1/exchangeInfo", timeout=15)
+    r_tks = session.get(f"{FAPI}/fapi/v1/ticker/24hr", timeout=15)
+
+    if r_info.status_code == 200 and r_tks.status_code == 200 and isinstance(r_tks.json(), list):
+        ex_info = r_info.json()
+        tks = r_tks.json()
+        active = {
+            s["symbol"]
+            for s in ex_info.get("symbols", [])
+            if s.get("status") == "TRADING"
+            and s.get("quoteAsset") == "USDT"
+            and s.get("contractType") == "PERPETUAL"
+            and s["symbol"] not in EXCLUDED_CRYPTO_SYMS
+        }
+    else:
+        _USE_VISION = True
+        print(f"  [KRIPTO] Binance Futures bolge kisiti ({r_info.status_code}/{r_tks.status_code}) -> data-api.binance.vision yedege gecildi.")
+        ex_info = session.get(f"{VISION_API}/api/v3/exchangeInfo", timeout=20).json()
+        tks = session.get(f"{VISION_API}/api/v3/ticker/24hr", timeout=20).json()
+        active = {
+            s["symbol"]
+            for s in ex_info.get("symbols", [])
+            if s.get("status") == "TRADING"
+            and s.get("quoteAsset") == "USDT"
+            and s.get("isSpotTradingAllowed", True)
+            and s["symbol"] not in EXCLUDED_CRYPTO_SYMS
+        }
+
+    liquid = [
+        x for x in tks
+        if isinstance(x, dict) and x.get("symbol") in active and float(x.get("quoteVolume", 0)) >= min_vol
+    ]
     liquid.sort(key=lambda x: float(x["quoteVolume"]), reverse=True)
     syms = [x["symbol"] for x in liquid[:max_coins]]
 
@@ -189,7 +218,9 @@ def get_binance_universe_and_movers(session, max_coins=CRYPTO_MAX_COINS, min_vol
 
     ticker_map = {}
     for x in tks:
-        sym = x["symbol"]
+        if not isinstance(x, dict):
+            continue
+        sym = x.get("symbol")
         if sym in active:
             ticker_map[sym] = {
                 "price": float(x.get("lastPrice", 0)),
