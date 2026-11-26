@@ -120,12 +120,45 @@
       "status_note": "AÇIK",
       "unrealized_r": -0.52,
       "unrealized_pnl": -421.53
+    },
+    {
+      "opened_at": "26.11.2026 23:49",
+      "portfolio": "SCALPER",
+      "market": "CRYPTO",
+      "engine_name": "1H • Short Dip Kırılımı",
+      "symbol": "SUIUSDT",
+      "direction": "SHORT",
+      "score": 78,
+      "entry_price": 0.6685,
+      "current_price": 0.6685,
+      "stop_loss": 0.685213,
+      "tp1_price": 0.649281,
+      "tp2_price": 0.625047,
+      "pos_size": 100.0,
+      "qty": 149.588631,
+      "entry_bar_ts": 1795730400000,
+      "setup_tag": "D120 • Δ -10.6%",
+      "exit_rules": {
+        "mode": "SCALPER_PAKET_D",
+        "init_risk": 0.01671250000000002,
+        "tp1_r": 1.150000000000001,
+        "tp2_r": 2.5999999999999974,
+        "tp1_weight": 0.4,
+        "cost_r": 0.05999999999999993,
+        "max_bars": 48,
+        "cooldown_hours": 48,
+        "close_stop": true
+      },
+      "status_note": "YENİ AÇILDI",
+      "unrealized_r": 0.0,
+      "unrealized_pnl": 0.0
     }
   ],
   "closed_trades": [],
   "cooldowns": {
     "BIST|Spot Long Dipten Topla|SISE": 1795674600000,
-    "BIST|Spot Long Dipten Topla|PETKM": 1795674600000
+    "BIST|Spot Long Dipten Topla|PETKM": 1795674600000,
+    "SCALPER|1H • Short Dip Kırılımı|SUIUSDT": 1795730400000
   },
-  "last_scan": "26.11.2026 22:50"
+  "last_scan": "26.11.2026 23:49"
 }
