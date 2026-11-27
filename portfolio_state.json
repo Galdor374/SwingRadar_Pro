@@ -24,10 +24,10 @@
       "currency": "$",
       "initial": 10000.0,
       "alloc_pct": 0.01,
-      "equity": 10000.0,
+      "equity": 9996.87,
       "peak_equity": 10000.0,
-      "max_dd_pct": 0.0,
-      "cum_r": 0.0,
+      "max_dd_pct": 0.03,
+      "cum_r": -1.25,
       "curve": [
         {
           "date": "26.11.2026 19:46",
@@ -35,6 +35,13 @@
           "ret_pct": 0.0,
           "cum_r": 0.0,
           "dd_pct": 0.0
+        },
+        {
+          "date": "27.11.2026 07:05",
+          "equity": 9996.87,
+          "ret_pct": -0.03,
+          "cum_r": -1.25,
+          "dd_pct": 0.03
         }
       ]
     },
@@ -120,45 +127,32 @@
       "status_note": "AÇIK",
       "unrealized_r": -0.52,
       "unrealized_pnl": -421.53
-    },
+    }
+  ],
+  "closed_trades": [
     {
+      "closed_at": "27.11.2026 07:05",
       "opened_at": "26.11.2026 23:49",
       "portfolio": "SCALPER",
-      "market": "CRYPTO",
-      "engine_name": "1H • Short Dip Kırılımı",
+      "engine": "1H • Short Dip Kırılımı",
       "symbol": "SUIUSDT",
       "direction": "SHORT",
       "score": 78,
       "entry_price": 0.6685,
-      "current_price": 0.688,
+      "exit_price": 0.6884,
       "stop_loss": 0.685213,
-      "tp1_price": 0.649281,
-      "tp2_price": 0.625047,
+      "stop_pct": 2.5,
       "pos_size": 100.0,
-      "qty": 149.588631,
-      "entry_bar_ts": 1795730400000,
-      "setup_tag": "D120 • Δ -10.6%",
-      "exit_rules": {
-        "mode": "SCALPER_PAKET_D",
-        "init_risk": 0.01671250000000002,
-        "tp1_r": 1.150000000000001,
-        "tp2_r": 2.5999999999999974,
-        "tp1_weight": 0.4,
-        "cost_r": 0.05999999999999993,
-        "max_bars": 48,
-        "cooldown_hours": 48,
-        "close_stop": true
-      },
-      "status_note": "AÇIK",
-      "unrealized_r": -1.17,
-      "unrealized_pnl": -2.92
+      "r_val": -1.25,
+      "pnl_money": -3.13,
+      "exit_reason": "KAPANIŞ STOPU",
+      "equity_after": 9996.87
     }
   ],
-  "closed_trades": [],
   "cooldowns": {
     "BIST|Spot Long Dipten Topla|SISE": 1795674600000,
     "BIST|Spot Long Dipten Topla|PETKM": 1795674600000,
     "SCALPER|1H • Short Dip Kırılımı|SUIUSDT": 1795730400000
   },
-  "last_scan": "27.11.2026 05:57"
+  "last_scan": "27.11.2026 07:05"
 }
