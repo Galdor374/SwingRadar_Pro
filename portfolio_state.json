@@ -75,7 +75,7 @@
       "direction": "LONG",
       "score": 100,
       "entry_price": 31.280001,
-      "current_price": 30.219999,
+      "current_price": 31.360001,
       "stop_loss": 29.511379,
       "tp1_price": 35.701556,
       "tp2_price": null,
@@ -94,8 +94,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": -0.6,
-      "unrealized_pnl": -338.88
+      "unrealized_r": 0.05,
+      "unrealized_pnl": 25.58
     },
     {
       "opened_at": "26.11.2026 19:46",
@@ -106,7 +106,7 @@
       "direction": "LONG",
       "score": 86,
       "entry_price": 15.42,
-      "current_price": 14.77,
+      "current_price": 15.54,
       "stop_loss": 14.168709,
       "tp1_price": 18.548227,
       "tp2_price": null,
@@ -125,8 +125,70 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": -0.52,
-      "unrealized_pnl": -421.53
+      "unrealized_r": 0.1,
+      "unrealized_pnl": 77.82
+    },
+    {
+      "opened_at": "27.11.2026 08:57",
+      "portfolio": "BIST",
+      "market": "BIST",
+      "engine_name": "Spot Long Dipten Topla",
+      "symbol": "TRALT",
+      "direction": "LONG",
+      "score": 90,
+      "entry_price": 34.700001,
+      "current_price": 34.700001,
+      "stop_loss": 30.962606,
+      "tp1_price": 44.043489,
+      "tp2_price": null,
+      "pos_size": 10000.0,
+      "qty": 288.184432,
+      "entry_bar_ts": 1795761000000,
+      "setup_tag": "Paket C Dip",
+      "exit_rules": {
+        "mode": "SAF_25R_CLOSE_STOP",
+        "init_risk": 3.737395160343837,
+        "tp1_r": 2.5,
+        "tp1_weight": 1.0,
+        "cost_r": 0.01856908315777189,
+        "max_bars": 40,
+        "cooldown_days": 5,
+        "close_stop": true
+      },
+      "status_note": "YENİ AÇILDI",
+      "unrealized_r": 0.0,
+      "unrealized_pnl": 0.0
+    },
+    {
+      "opened_at": "27.11.2026 08:57",
+      "portfolio": "BIST",
+      "market": "BIST",
+      "engine_name": "Spot Long Dipten Topla",
+      "symbol": "ENJSA",
+      "direction": "LONG",
+      "score": 60,
+      "entry_price": 107.900002,
+      "current_price": 107.900002,
+      "stop_loss": 102.289064,
+      "tp1_price": 121.927346,
+      "tp2_price": null,
+      "pos_size": 10000.0,
+      "qty": 92.678405,
+      "entry_bar_ts": 1795761000000,
+      "setup_tag": "Paket C Dip",
+      "exit_rules": {
+        "mode": "SAF_25R_CLOSE_STOP",
+        "init_risk": 5.610937776228468,
+        "tp1_r": 2.5,
+        "tp1_weight": 1.0,
+        "cost_r": 0.03846059458474572,
+        "max_bars": 40,
+        "cooldown_days": 5,
+        "close_stop": true
+      },
+      "status_note": "YENİ AÇILDI",
+      "unrealized_r": 0.0,
+      "unrealized_pnl": 0.0
     }
   ],
   "closed_trades": [
@@ -152,7 +214,9 @@
   "cooldowns": {
     "BIST|Spot Long Dipten Topla|SISE": 1795674600000,
     "BIST|Spot Long Dipten Topla|PETKM": 1795674600000,
-    "SCALPER|1H • Short Dip Kırılımı|SUIUSDT": 1795730400000
+    "SCALPER|1H • Short Dip Kırılımı|SUIUSDT": 1795730400000,
+    "BIST|Spot Long Dipten Topla|TRALT": 1795761000000,
+    "BIST|Spot Long Dipten Topla|ENJSA": 1795761000000
   },
-  "last_scan": "27.11.2026 07:05"
+  "last_scan": "27.11.2026 08:57"
 }
