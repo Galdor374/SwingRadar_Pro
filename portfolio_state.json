@@ -75,7 +75,7 @@
       "direction": "LONG",
       "score": 100,
       "entry_price": 31.280001,
-      "current_price": 31.9,
+      "current_price": 31.280001,
       "stop_loss": 29.511379,
       "tp1_price": 35.701556,
       "tp2_price": null,
@@ -94,8 +94,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.35,
-      "unrealized_pnl": 198.21
+      "unrealized_r": -0.0,
+      "unrealized_pnl": -0.0
     },
     {
       "opened_at": "26.11.2026 19:46",
@@ -106,7 +106,7 @@
       "direction": "LONG",
       "score": 86,
       "entry_price": 15.42,
-      "current_price": 15.51,
+      "current_price": 15.42,
       "stop_loss": 14.168709,
       "tp1_price": 18.548227,
       "tp2_price": null,
@@ -125,8 +125,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.07,
-      "unrealized_pnl": 58.37
+      "unrealized_r": 0.0,
+      "unrealized_pnl": 0.0
     },
     {
       "opened_at": "27.11.2026 08:57",
@@ -137,7 +137,7 @@
       "direction": "LONG",
       "score": 90,
       "entry_price": 34.700001,
-      "current_price": 35.540001,
+      "current_price": 33.02,
       "stop_loss": 30.962606,
       "tp1_price": 44.043489,
       "tp2_price": null,
@@ -156,8 +156,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.22,
-      "unrealized_pnl": 242.07
+      "unrealized_r": -0.45,
+      "unrealized_pnl": -484.15
     },
     {
       "opened_at": "27.11.2026 08:57",
@@ -168,7 +168,7 @@
       "direction": "LONG",
       "score": 60,
       "entry_price": 107.900002,
-      "current_price": 108.699997,
+      "current_price": 106.0,
       "stop_loss": 102.289064,
       "tp1_price": 121.927346,
       "tp2_price": null,
@@ -187,8 +187,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.14,
-      "unrealized_pnl": 74.14
+      "unrealized_r": -0.34,
+      "unrealized_pnl": -176.09
     },
     {
       "opened_at": "27.11.2026 09:59",
@@ -199,7 +199,7 @@
       "direction": "LONG",
       "score": 83,
       "entry_price": 15.26,
-      "current_price": 15.43,
+      "current_price": 15.04,
       "stop_loss": 14.251355,
       "tp1_price": 17.781614,
       "tp2_price": null,
@@ -218,8 +218,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.17,
-      "unrealized_pnl": 111.4
+      "unrealized_r": -0.22,
+      "unrealized_pnl": -144.17
     },
     {
       "opened_at": "27.11.2026 09:59",
@@ -230,7 +230,7 @@
       "direction": "LONG",
       "score": 76,
       "entry_price": 30.1,
-      "current_price": 30.6,
+      "current_price": 29.58,
       "stop_loss": 27.977748,
       "tp1_price": 35.405631,
       "tp2_price": null,
@@ -249,8 +249,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.24,
-      "unrealized_pnl": 166.11
+      "unrealized_r": -0.25,
+      "unrealized_pnl": -172.76
     },
     {
       "opened_at": "27.11.2026 09:59",
@@ -261,7 +261,7 @@
       "direction": "LONG",
       "score": 76,
       "entry_price": 36.18,
-      "current_price": 36.380001,
+      "current_price": 35.299999,
       "stop_loss": 33.418054,
       "tp1_price": 43.084865,
       "tp2_price": null,
@@ -280,8 +280,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.07,
-      "unrealized_pnl": 55.28
+      "unrealized_r": -0.32,
+      "unrealized_pnl": -243.23
     },
     {
       "opened_at": "27.11.2026 09:59",
@@ -292,7 +292,7 @@
       "direction": "LONG",
       "score": 76,
       "entry_price": 45.580002,
-      "current_price": 45.880001,
+      "current_price": 44.759998,
       "stop_loss": 43.055912,
       "tp1_price": 51.890226,
       "tp2_price": null,
@@ -311,8 +311,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.12,
-      "unrealized_pnl": 65.82
+      "unrealized_r": -0.32,
+      "unrealized_pnl": -179.9
     },
     {
       "opened_at": "27.11.2026 09:59",
@@ -323,7 +323,7 @@
       "direction": "LONG",
       "score": 69,
       "entry_price": 60.799999,
-      "current_price": 63.700001,
+      "current_price": 59.400002,
       "stop_loss": 56.052945,
       "tp1_price": 72.667634,
       "tp2_price": null,
@@ -342,8 +342,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.61,
-      "unrealized_pnl": 476.97
+      "unrealized_r": -0.29,
+      "unrealized_pnl": -230.26
     },
     {
       "opened_at": "27.11.2026 10:50",
@@ -354,7 +354,7 @@
       "direction": "LONG",
       "score": 86,
       "entry_price": 76.5,
-      "current_price": 75.599998,
+      "current_price": 75.150002,
       "stop_loss": 71.765812,
       "tp1_price": 88.33547,
       "tp2_price": null,
@@ -373,8 +373,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": -0.19,
-      "unrealized_pnl": -117.65
+      "unrealized_r": -0.29,
+      "unrealized_pnl": -176.47
     },
     {
       "opened_at": "27.11.2026 10:50",
@@ -385,7 +385,7 @@
       "direction": "LONG",
       "score": 66,
       "entry_price": 88.75,
-      "current_price": 89.400002,
+      "current_price": 86.550003,
       "stop_loss": 83.363098,
       "tp1_price": 102.217254,
       "tp2_price": null,
@@ -404,8 +404,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.12,
-      "unrealized_pnl": 73.24
+      "unrealized_r": -0.41,
+      "unrealized_pnl": -247.89
     },
     {
       "opened_at": "27.11.2026 15:53",
@@ -416,7 +416,7 @@
       "direction": "SHORT",
       "score": 76,
       "entry_price": 0.979,
-      "current_price": 0.989,
+      "current_price": 0.99,
       "stop_loss": 1.017302,
       "tp1_price": 0.921547,
       "tp2_price": 0.856433,
@@ -436,8 +436,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": -0.26,
-      "unrealized_pnl": -1.02
+      "unrealized_r": -0.29,
+      "unrealized_pnl": -1.12
     },
     {
       "opened_at": "27.11.2026 17:51",
@@ -448,7 +448,7 @@
       "direction": "SHORT",
       "score": 76,
       "entry_price": 0.02674,
-      "current_price": 0.02708,
+      "current_price": 0.02731,
       "stop_loss": 0.027935,
       "tp1_price": 0.024948,
       "tp2_price": 0.022917,
@@ -468,8 +468,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": -0.28,
-      "unrealized_pnl": -1.27
+      "unrealized_r": -0.48,
+      "unrealized_pnl": -2.13
     }
   ],
   "closed_trades": [
@@ -508,5 +508,5 @@
     "SCALPER|1H • Short Trend Takip|GRAMUSDT": 1795788000000,
     "SCALPER|1H • Short Trend Takip|KAVAUSDT": 1795795200000
   },
-  "last_scan": "27.11.2026 20:49"
+  "last_scan": "27.11.2026 21:50"
 }
