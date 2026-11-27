@@ -416,7 +416,7 @@
       "direction": "SHORT",
       "score": 76,
       "entry_price": 0.979,
-      "current_price": 0.993,
+      "current_price": 0.989,
       "stop_loss": 1.017302,
       "tp1_price": 0.921547,
       "tp2_price": 0.856433,
@@ -436,8 +436,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": -0.37,
-      "unrealized_pnl": -1.43
+      "unrealized_r": -0.26,
+      "unrealized_pnl": -1.02
     },
     {
       "opened_at": "27.11.2026 17:51",
@@ -448,7 +448,7 @@
       "direction": "SHORT",
       "score": 76,
       "entry_price": 0.02674,
-      "current_price": 0.02719,
+      "current_price": 0.02708,
       "stop_loss": 0.027935,
       "tp1_price": 0.024948,
       "tp2_price": 0.022917,
@@ -468,8 +468,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": -0.38,
-      "unrealized_pnl": -1.68
+      "unrealized_r": -0.28,
+      "unrealized_pnl": -1.27
     }
   ],
   "closed_trades": [
@@ -508,5 +508,5 @@
     "SCALPER|1H • Short Trend Takip|GRAMUSDT": 1795788000000,
     "SCALPER|1H • Short Trend Takip|KAVAUSDT": 1795795200000
   },
-  "last_scan": "27.11.2026 19:53"
+  "last_scan": "27.11.2026 20:49"
 }
