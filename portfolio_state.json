@@ -130,7 +130,7 @@
       "direction": "SHORT",
       "score": 78,
       "entry_price": 0.6685,
-      "current_price": 0.6685,
+      "current_price": 0.6712,
       "stop_loss": 0.685213,
       "tp1_price": 0.649281,
       "tp2_price": 0.625047,
@@ -149,9 +149,9 @@
         "cooldown_hours": 48,
         "close_stop": true
       },
-      "status_note": "YENİ AÇILDI",
-      "unrealized_r": 0.0,
-      "unrealized_pnl": 0.0
+      "status_note": "AÇIK",
+      "unrealized_r": -0.16,
+      "unrealized_pnl": -0.4
     }
   ],
   "closed_trades": [],
@@ -160,5 +160,5 @@
     "BIST|Spot Long Dipten Topla|PETKM": 1795674600000,
     "SCALPER|1H • Short Dip Kırılımı|SUIUSDT": 1795730400000
   },
-  "last_scan": "26.11.2026 23:49"
+  "last_scan": "27.11.2026 01:01"
 }
