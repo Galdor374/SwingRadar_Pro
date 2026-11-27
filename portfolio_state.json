@@ -416,7 +416,7 @@
       "direction": "SHORT",
       "score": 76,
       "entry_price": 0.979,
-      "current_price": 0.988,
+      "current_price": 0.984,
       "stop_loss": 1.017302,
       "tp1_price": 0.921547,
       "tp2_price": 0.856433,
@@ -436,8 +436,40 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": -0.23,
-      "unrealized_pnl": -0.92
+      "unrealized_r": -0.13,
+      "unrealized_pnl": -0.51
+    },
+    {
+      "opened_at": "27.11.2026 17:51",
+      "portfolio": "SCALPER",
+      "market": "CRYPTO",
+      "engine_name": "1H • Short Trend Takip",
+      "symbol": "KAVAUSDT",
+      "direction": "SHORT",
+      "score": 76,
+      "entry_price": 0.02674,
+      "current_price": 0.02674,
+      "stop_loss": 0.027935,
+      "tp1_price": 0.024948,
+      "tp2_price": 0.022917,
+      "pos_size": 99.97,
+      "qty": 3738.593867,
+      "entry_bar_ts": 1795795200000,
+      "setup_tag": "H4_TEPE • Δ -5.0%",
+      "exit_rules": {
+        "mode": "SCALPER_PAKET_D",
+        "init_risk": 0.0011947933760263346,
+        "tp1_r": 1.5,
+        "tp2_r": 3.2,
+        "tp1_weight": 0.35,
+        "cost_r": 0.03357065816132875,
+        "max_bars": 48,
+        "cooldown_hours": 48,
+        "close_stop": true
+      },
+      "status_note": "YENİ AÇILDI",
+      "unrealized_r": 0.0,
+      "unrealized_pnl": 0.0
     }
   ],
   "closed_trades": [
@@ -473,7 +505,8 @@
     "BIST|Spot Long Dipten Topla|AKSEN": 1795761000000,
     "BIST|Spot Long Dipten Topla|SAHOL": 1795761000000,
     "BIST|Spot Long Dipten Topla|TCELL": 1795761000000,
-    "SCALPER|1H • Short Trend Takip|GRAMUSDT": 1795788000000
+    "SCALPER|1H • Short Trend Takip|GRAMUSDT": 1795788000000,
+    "SCALPER|1H • Short Trend Takip|KAVAUSDT": 1795795200000
   },
-  "last_scan": "27.11.2026 16:59"
+  "last_scan": "27.11.2026 17:51"
 }
