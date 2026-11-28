@@ -423,7 +423,7 @@
       "direction": "SHORT",
       "score": 76,
       "entry_price": 0.979,
-      "current_price": 0.964,
+      "current_price": 0.962,
       "stop_loss": 1.017302,
       "tp1_price": 0.921547,
       "tp2_price": 0.856433,
@@ -443,8 +443,8 @@
         "close_stop": true
       },
       "status_note": "AÇIK",
-      "unrealized_r": 0.39,
-      "unrealized_pnl": 1.53
+      "unrealized_r": 0.44,
+      "unrealized_pnl": 1.74
     }
   ],
   "closed_trades": [
@@ -501,5 +501,5 @@
     "SCALPER|1H • Short Trend Takip|GRAMUSDT": 1795788000000,
     "SCALPER|1H • Short Trend Takip|KAVAUSDT": 1795795200000
   },
-  "last_scan": "28.11.2026 16:42"
+  "last_scan": "28.11.2026 17:39"
 }
